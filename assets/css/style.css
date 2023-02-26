@@ -203,3 +203,32 @@ img {
 .scroll-header .nav-menu {
     background-color: var(--main-color-lighter);
 }
+
+.scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    background: rgba(166, 166, 166, 0.7);
+    border-radius: .5rem;
+    z-index: var(--z-tooltips);
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop:hover {
+    background-color: var(--main-color);
+}
+
+.scrolltop-icon {
+    font-size: 1.5rem;
+    color: var(--main-color-lighter);
+}
+
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}
