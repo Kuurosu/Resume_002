@@ -7,7 +7,7 @@
     --main-color: #2b2b2b;
     --main-color-dark: #1b1b1b;
     --main-color-light: #6a6a6a;
-    --main-color-lighter: #9a9a9a;
+    --main-color-lighter: #efefef;
     --text-color: #efefef;
 
     --body-font: 'Montserrat', sans-serif;
@@ -127,4 +127,79 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--main-color);
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding-top: 1.5rem;
+        text-align: center;
+        background-color: var(--main-color-dark);
+        transition: .4s;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+.nav-item {
+    margin-bottom: var(--margin-3);
+}
+
+.nav-link {
+    color: var(--main-color-lighter);
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: var(--main-color-light)
+}
+
+.nav-logo, .nav-toggle {
+    color: var(--main-color-lighter)
+}
+
+.nav-toggle {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.show-menu {
+    top: var(--header-height);
+}
+
+.active-link {
+    position: relative;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -.7rem;
+    left: 0;
+    width: 65%;
+    height: 3px;
+    background-color: var(--main-color-light);
+}
+
+.scroll-header {
+    background-color: var(--main-color-lighter);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.scroll-header .nav-logo, .scroll-header .nav-toggle, .scroll-header .nav-link {
+    color: var(--main-color-dark);
+}
+
+.scroll-header .nav-menu {
+    background-color: var(--main-color-lighter);
 }
