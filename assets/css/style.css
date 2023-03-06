@@ -232,3 +232,85 @@ img {
     visibility: visible;
     bottom: 1.5rem;
 }
+
+.home {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.home-container {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    grid-template-rows: repeat(2, max-content);
+    align-content: space-around;
+    row-gap: 2rem;
+}
+
+.home-data {
+    border-left: 4px solid var(--main-color-lighter);
+    color: var(--main-color-lighter);
+    padding-left: 1.5rem;
+    z-index: var(--z-tooltips);
+}
+
+.home-name {
+    font-size: var(--largest-font-size);
+}
+
+.home-greeting, .home-profession {
+    display: block;
+    font-weight: var(--font-bold);
+}
+
+.home-greeting {
+    font-size: var(--small-size);
+}
+
+.home-profession {
+    font-size: var(--normal-size);
+    margin-bottom: var(--margin-3);
+}
+
+.home-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.home-image img {
+    width: 340px;
+    scale: 150%;
+}
+
+.home-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-social-icon {
+    width: max-content;
+    font-size: var(--h2-size);
+    margin-bottom: var(--margin-2);
+    color: var(--main-color-lighter);
+}
+
+.home-social-icon:hover {
+    color: var(--main-color-light);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--main-color-lighter);
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--main-color-dark);
+}
+
+.button-light {
+    background-color: var(--main-color-light);
+}
